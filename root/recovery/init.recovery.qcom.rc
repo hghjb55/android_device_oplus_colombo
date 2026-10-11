@@ -26,6 +26,7 @@
 #
 
 import /init.recovery.qcom_decrypt.rc
+import /vendor/etc/init/hw/init.qcom.usb.rc
 
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
