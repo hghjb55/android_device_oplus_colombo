@@ -118,3 +118,29 @@ TARGET_USES_UEFI := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 167772160
 
+# Twrp
+TW_EXTRA_LANGUAGES         := true
+TW_INCLUDE_MTP             := true
+TW_CUSTOM_CPU_TEMP_PATH    := "/sys/class/thermal/thermal_zone34/temp"
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_SCREEN_BLANK_ON_BOOT    := true
+TW_USE_TOOLBOX             := true
+TW_HAS_EDL_MODE            := true
+TW_INCLUDE_FASTBOOTD       := true
+
+# TWRP file system
+TARGET_USES_MKE2FS          := true
+TW_INCLUDE_FUSE_EXFAT       := true
+TW_INCLUDE_FUSE_NTFS        := true
+TW_INCLUDE_NTFS_3G          := true
+TW_ENABLE_ALL_PARTITION_TOOLS := true
+
+# Tools
+TW_INCLUDE_RESETPROP    := true
+TW_INCLUDE_REPACKTOOLS  := true
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_LPDUMP       := true
+TW_INCLUDE_LPTOOLS      := true
+
+# USB
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
